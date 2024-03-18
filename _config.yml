@@ -7,14 +7,14 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "CHINA"
+locale                   : #"CHINA"
 title                    : "Yi Yao's Academic Homepage (under construction ...)"
-title_separator          : "-baba"
+title_separator          : #"-baba"
 name                     : &name "Yi Yao"
 description              : "a math teacher"
 url                      : https://yeeyoe.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "yeeyoe/yeeyoe.github.io"
+repository               : #"yeeyoe/yeeyoe.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -28,7 +28,7 @@ author:
   location         : "Changsha, Hunan, CHINA"
   employer         : "Hunan University"
   uri              : #
-  email            : "yeeyoe@163.com" 
+  email            : #"yeeyoe@163.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
