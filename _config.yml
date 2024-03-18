@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "CHINA"
-title                    : "Yi Yao | Academic Homepage Under construction ..."
+title                    : "Yi Yao's Academic Homepage (under construction ...)"
 title_separator          : "-baba"
 name                     : &name "Yi Yao"
 description              : "a math teacher"
@@ -22,7 +22,7 @@ repository               : "yeeyoe/yeeyoe.github.io"
 author:
   # Biographic information
   avatar           : "mingwang.jpg"
-  name             : "Yi Yao"
+  name             : "姚Yao 懿Yi"
   pronouns         : # example: "she/her"  
   bio              : #"study and teach math"
   location         : "Changsha, Hunan, CHINA"
