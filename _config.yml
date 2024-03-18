@@ -8,8 +8,8 @@
 
 # Basic Site Settings
 locale                   : "CHINA"
-title                    : "Yi Yao / Homepage"
-title_separator          : "-"
+title                    : "Yi Yao | Academic Homepage"
+title_separator          : "-baba"
 name                     : &name "Yi Yao"
 description              : &description "a math teacher"
 url                      : https://yeeyoe.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
