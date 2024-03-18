@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "CHINA"
-title                    : "Yi Yao | Academic Homepage"
+title                    : "Yi Yao | Academic Homepage Under construction ..."
 title_separator          : "-baba"
 name                     : &name "Yi Yao"
-description              : &description "a math teacher"
+description              : "a math teacher"
 url                      : https://yeeyoe.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "yeeyoe/yeeyoe.github.io"
@@ -21,7 +21,7 @@ repository               : "yeeyoe/yeeyoe.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.gif"
+  avatar           : "profile.pgn"
   name             : "Yi Yao"
   pronouns         : # example: "she/her"  
   bio              : "study and teach math"
