@@ -1,0 +1,36 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Layout from "./Layout.astro";
+import { translateFor } from "@/i18n/utils";
+import type { I18nKeys } from "@/i18n/types";
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+  };
+  pageTitleKey: I18nKeys;
+}
+
+const t = translateFor(Astro.currentLocale);
+
+const { frontmatter, pageTitleKey } = Astro.props;
+
+const siteTitle = t("site.title");
+const pageTitle = t(pageTitleKey);
+const title = `${pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1)} | ${siteTitle}`;
+---
+
+<Layout title={title}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content">
+    <section id={pageTitleKey} class="prose mb-28 max-w-app prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
+      <slot />
+    </section>
+  </main>
+  <Footer />
+</Layout>

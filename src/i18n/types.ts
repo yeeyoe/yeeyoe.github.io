@@ -10,6 +10,9 @@ export interface I18nStrings {
   copied: string;
   by: string;
   about: string;
+  research: string;
+  teaching: string;
+  coding: string;
   socialLinks: string;
   home: string;
   posts: string;

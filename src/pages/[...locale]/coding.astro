@@ -1,0 +1,35 @@
+---
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/i18n/config";
+import PageLayout from "@/layouts/PageLayout.astro";
+import { getCodingForLocale } from "@/utils/about";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map(locale => ({
+    params: { locale: locale === DEFAULT_LOCALE ? undefined : locale },
+  }));
+}
+
+const { locale = DEFAULT_LOCALE } = Astro.params;
+const coding = await getCodingForLocale(locale);
+
+let Content;
+
+let frontmatter: { title: string; description?: string } = {
+  title: "",
+};
+
+if (coding) {
+  const rendered = await render(coding);
+  Content = rendered.Content;
+
+  frontmatter = {
+    title: coding.data.title,
+    description: coding.data.description,
+  };
+}
+---
+
+<PageLayout frontmatter={frontmatter} pageTitleKey="coding">
+  {Content ? <Content /> : <p />}
+</PageLayout>

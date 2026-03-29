@@ -31,8 +31,7 @@ export default defineConfig({
       [
         remarkToc,
         {
-          heading:
-            "(table[ -]of[ -])?contents?|toc|محتويات|المحتويات|جدول المحتويات",
+          heading: "(table[ -]of[ -])?contents?|toc",
         },
       ],
       [remarkCollapse, { test: "Table of contents" }],

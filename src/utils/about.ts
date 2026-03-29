@@ -9,3 +9,12 @@ import { getEntry } from "astro:content";
  */
 export const getAboutForLocale = async (locale: LocaleKey) =>
   getEntry("about", `about${locale}`);
+
+export const getResearchForLocale = async (locale: LocaleKey) =>
+  getEntry("research", `research${locale}`);
+
+export const getTeachingForLocale = async (locale: LocaleKey) =>
+  getEntry("teaching", `teaching${locale}`);
+
+export const getCodingForLocale = async (locale: LocaleKey) =>
+  getEntry("coding", `coding${locale}`);

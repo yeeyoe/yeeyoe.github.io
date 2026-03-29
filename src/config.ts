@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://astro-paper-i18n.netlify.app/", // replace this with your deployed domain
-  author: "Yousef Elsayed",
-  profile: "https://yousef8.github.io/astro-paper-i18n",
+  website: "https://github.com/yeeyoe/astro-paper-en-ch/", // replace this with your deployed domain
+  author: "Yi Yao",
+  profile: "https://yeeyoe.github.io/astro-paper-en-ch",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -11,7 +11,7 @@ export const SITE = {
   showBackButton: true, // show back button in post detail
   editPost: {
     enabled: true,
-    url: "https://github.com/yousef8/astro-paper-i18n/edit/main/",
+    url: "https://github.com/yeeyoe/astro-paper-en-ch/edit/main/",
   },
   dynamicOgImage: true,
   lang: "en", // html lang code. Set this empty and default will be "en"
