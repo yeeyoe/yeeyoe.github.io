@@ -1,0 +1,5 @@
+pnpm run dev
+
+git add .
+git commit -m "fix: cleanup unused imports and format code to pass pre-commit checks"
+git push origin main
