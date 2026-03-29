@@ -7,27 +7,21 @@ const baseStrings = {
 
 const ENLocale: I18nStrings = {
   ...baseStrings,
-  "hero.title": "Mingalaba",
+  "hero.title": "Hello",
   "hero.body": `
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        Welcome to my personal website. (Under construction...)
 `,
-  "hero.beforeReadme": "Read the blog posts or check",
-  "hero.readme": "README",
-  "hero.afterReadme": "for more info.",
   copy: "copy",
   copied: "copied",
   by: "by",
-  about: "About",
+  me: "Me",
   research: "Research",
-  teaching: "Teach",
-  coding: "Code",
+  teach: "Teach",
+  code: "Code",
   socialLinks: "Social Links",
   home: "Home",
-  posts: "Blog",
-  "posts.desc": "All the articles I've posted.",
+  blog: "Blog",
+  "blog.desc": "All the articles I've posted.",
   tag: "Tag",
   "tag.desc": 'All the articles with the tag "{name}".',
   tags: "Tags",

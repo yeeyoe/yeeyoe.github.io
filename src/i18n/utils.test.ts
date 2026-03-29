@@ -113,27 +113,27 @@ describe("getLocaleInfo", () => {
 
 describe("getRelativeLocalePath", () => {
   it("should return the correct localized path for a default locale", () => {
-    const path = getRelativeLocalePath(DEFAULT_LOCALE, "/posts/1");
-    expect(path).toBe("/posts/1");
+    const path = getRelativeLocalePath(DEFAULT_LOCALE, "/blog/1");
+    expect(path).toBe("/blog/1");
   });
 
   it("should return the correct localized path for a supported locale", () => {
-    const path = getRelativeLocalePath("ja", "/posts/1");
-    expect(path).toBe("/ja/posts/1");
+    const path = getRelativeLocalePath("ja", "/blog/1");
+    expect(path).toBe("/ja/blog/1");
   });
 
   it("should add a trailing slash", () => {
-    const pathWithSlash = getRelativeLocalePath("ja", "/posts/1/");
-    expect(pathWithSlash).toBe("/ja/posts/1/");
+    const pathWithSlash = getRelativeLocalePath("ja", "/blog/1/");
+    expect(pathWithSlash).toBe("/ja/blog/1/");
   });
 
   it("should not contain a trailing slash", () => {
-    const pathWithoutSlash = getRelativeLocalePath("ja", "/posts/1");
-    expect(pathWithoutSlash).toBe("/ja/posts/1");
+    const pathWithoutSlash = getRelativeLocalePath("ja", "/blog/1");
+    expect(pathWithoutSlash).toBe("/ja/blog/1");
   });
 
   it("should throw an error for an unsupported locale", () => {
-    expect(() => getRelativeLocalePath("unsupported", "/posts/1")).toThrow();
+    expect(() => getRelativeLocalePath("unsupported", "/blog/1")).toThrow();
   });
 
   it("should not remove trailing slash for root path `/`", () => {
@@ -180,13 +180,13 @@ describe("getSlugWithoutLocale", () => {
 
 describe("stripBaseAndLocale", () => {
   it("should throw error for unsupported locale", () => {
-    expect(() => stripBaseAndLocale("en", "/posts/1")).toThrowError(
+    expect(() => stripBaseAndLocale("en", "/blog/1")).toThrowError(
       UnsupportedLocale
     );
   });
 
   it("should throw error for undefined locale", () => {
-    expect(() => stripBaseAndLocale(undefined, "/posts/1")).toThrowError(
+    expect(() => stripBaseAndLocale(undefined, "/blog/1")).toThrowError(
       UnsupportedLocale
     );
   });
@@ -198,14 +198,14 @@ describe("stripBaseAndLocale", () => {
         expect(strippedPath).toBe("/");
       });
 
-      it("return '/posts/1'", () => {
-        const strippedPath = stripBaseAndLocale(DEFAULT_LOCALE, "/posts/1");
-        expect(strippedPath).toBe("/posts/1");
+      it("return '/blog/1'", () => {
+        const strippedPath = stripBaseAndLocale(DEFAULT_LOCALE, "/blog/1");
+        expect(strippedPath).toBe("/blog/1");
       });
 
       it("appends trailing slash if path passed have it", () => {
-        const strippedPath = stripBaseAndLocale(DEFAULT_LOCALE, "/posts/1/");
-        expect(strippedPath).toBe("/posts/1/");
+        const strippedPath = stripBaseAndLocale(DEFAULT_LOCALE, "/blog/1/");
+        expect(strippedPath).toBe("/blog/1/");
       });
     });
 
@@ -215,14 +215,14 @@ describe("stripBaseAndLocale", () => {
         expect(strippedPath).toBe("/");
       });
 
-      it("return '/posts/1'", () => {
-        const strippedPath = stripBaseAndLocale("ja", "/ja/posts/1");
-        expect(strippedPath).toBe("/posts/1");
+      it("return '/blog/1'", () => {
+        const strippedPath = stripBaseAndLocale("ja", "/ja/blog/1");
+        expect(strippedPath).toBe("/blog/1");
       });
 
       it("appends trailing slash if path passed have it", () => {
-        const strippedPath = stripBaseAndLocale("ja", "/ja/posts/1/");
-        expect(strippedPath).toBe("/posts/1/");
+        const strippedPath = stripBaseAndLocale("ja", "/ja/blog/1/");
+        expect(strippedPath).toBe("/blog/1/");
       });
     });
   });
@@ -242,24 +242,24 @@ describe("stripBaseAndLocale", () => {
         expect(strippedPath).toBe("/");
       });
 
-      it("return '/posts/1'", () => {
+      it("return '/blog/1'", () => {
         const strippedPath = stripBaseAndLocale(
           DEFAULT_LOCALE,
-          "/astro/posts/1",
+          "/astro/blog/1",
           undefined,
           _buildPrefix
         );
-        expect(strippedPath).toBe("/posts/1");
+        expect(strippedPath).toBe("/blog/1");
       });
 
       it("appends trailing slash if path passed have it", () => {
         const strippedPath = stripBaseAndLocale(
           DEFAULT_LOCALE,
-          "/astro/posts/1/",
+          "/astro/blog/1/",
           undefined,
           _buildPrefix
         );
-        expect(strippedPath).toBe("/posts/1/");
+        expect(strippedPath).toBe("/blog/1/");
       });
     });
 
@@ -274,24 +274,24 @@ describe("stripBaseAndLocale", () => {
         expect(strippedPath).toBe("/");
       });
 
-      it("return '/posts/1'", () => {
+      it("return '/blog/1'", () => {
         const strippedPath = stripBaseAndLocale(
           "ja",
-          "/astro/ja/posts/1",
+          "/astro/ja/blog/1",
           undefined,
           _buildPrefix
         );
-        expect(strippedPath).toBe("/posts/1");
+        expect(strippedPath).toBe("/blog/1");
       });
 
       it("appends trailing slash if path passed have it", () => {
         const strippedPath = stripBaseAndLocale(
           "ja",
-          "/astro/ja/posts/1/",
+          "/astro/ja/blog/1/",
           undefined,
           _buildPrefix
         );
-        expect(strippedPath).toBe("/posts/1/");
+        expect(strippedPath).toBe("/blog/1/");
       });
     });
   });

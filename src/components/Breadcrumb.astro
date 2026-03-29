@@ -32,16 +32,16 @@ if (isLocaleKey(breadcrumbList[0])) {
 // so we need to keep a separate array of urls in english
 const breadcrumbListUrls = [...breadcrumbList];
 
-if (breadcrumbList[0] !== "posts")
+if (breadcrumbList[0] !== "blog")
   breadcrumbList[0] = t(breadcrumbList[0] as keyof I18nStrings);
 
-// if breadcrumb is Home > Posts > 1 <etc>
-// replace Posts with Posts (page number)
-if (breadcrumbList[0] === "posts") {
+// if breadcrumb is Home > Blog > 1 <etc>
+// replace Blog with Blog (page number)
+if (breadcrumbList[0] === "blog") {
   breadcrumbList.splice(
     0,
     2,
-    `${t("posts")} (${t("pageWithNo", { no: parseInt(breadcrumbList[1] || "1").toLocaleString(LOCALE.langTag) })})`
+    `${t("blog")} (${t("pageWithNo", { no: parseInt(breadcrumbList[1] || "1").toLocaleString(LOCALE.langTag) })})`
   );
 }
 

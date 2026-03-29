@@ -9,24 +9,19 @@ const CNLocale: I18nStrings = {
   ...baseStrings,
   "hero.title": "你好",
   "hero.body": `
-        AstroPaper 是一个极简、响应式、无障碍且对SEO友好的 Astro 博客主题。
-        该主题遵循最佳实践，开箱即提供无障碍支持。
-        默认支持浅色和深色模式，此外还可以配置其他配色方案。
+        欢迎来到我的个人主页。（施工中...）
 `,
-  "hero.beforeReadme": "阅读博客文章或查看",
-  "hero.readme": "README",
-  "hero.afterReadme": "获取更多信息。",
   copy: "复制",
   copied: "已复制",
   by: "作者",
-  about: "关于",
+  me: "我",
   research: "研究",
-  teaching: "教学",
-  coding: "编程",
+  teach: "教学",
+  code: "编程",
   socialLinks: "社交链接",
   home: "首页",
-  posts: "博客",
-  "posts.desc": "我发布的所有文章。",
+  blog: "博客",
+  "blog.desc": "我发布的所有文章。",
   tag: "标签",
   "tag.desc": '所有带有"{name}"标签的文章。',
   tags: "标签",

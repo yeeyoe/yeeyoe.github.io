@@ -78,10 +78,10 @@ const isActive = (path: string) => {
         >
           <li class="col-span-3">
             <a
-              href={getRelativeLocalePath(Astro.currentLocale, "/about")}
-              class:list={{ "active-nav": isActive("/about") }}
+              href={getRelativeLocalePath(Astro.currentLocale, "/me")}
+              class:list={{ "active-nav": isActive("/me") }}
             >
-              {t("about")}
+              {t("me")}
             </a>
           </li>
           <li class="col-span-3">
@@ -94,26 +94,26 @@ const isActive = (path: string) => {
           </li>
           <li class="col-span-3">
             <a
-              href={getRelativeLocalePath(Astro.currentLocale, "/teaching")}
-              class:list={{ "active-nav": isActive("/teaching") }}
+              href={getRelativeLocalePath(Astro.currentLocale, "/teach")}
+              class:list={{ "active-nav": isActive("/teach") }}
             >
-              {t("teaching")}
+              {t("teach")}
             </a>
           </li>
           <li class="col-span-3">
             <a
-              href={getRelativeLocalePath(Astro.currentLocale, "/coding")}
-              class:list={{ "active-nav": isActive("/coding") }}
+              href={getRelativeLocalePath(Astro.currentLocale, "/code")}
+              class:list={{ "active-nav": isActive("/code") }}
             >
-              {t("coding")}
+              {t("code")}
             </a>
           </li>
           <li class="col-span-3">
             <a
-              href={getRelativeLocalePath(Astro.currentLocale, "/posts/")}
-              class:list={{ "active-nav": isActive("/posts") }}
+              href={getRelativeLocalePath(Astro.currentLocale, "/blog/")}
+              class:list={{ "active-nav": isActive("/blog") }}
             >
-              {t("posts")}
+              {t("blog")}
             </a>
           </li>
           <li class="col-span-3">

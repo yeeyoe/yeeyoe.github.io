@@ -35,9 +35,9 @@ const { page } = Astro.props;
 const t = translateFor(Astro.currentLocale);
 ---
 
-<Layout title={`${t("posts")} | ${t("site.title")}`}>
+<Layout title={`${t("blog")} | ${t("site.title")}`}>
   <Header />
-  <Main pageTitle={t("posts")} pageDesc={t("posts.desc")}>
+  <Main pageTitle={t("blog")} pageDesc={t("blog.desc")}>
     <ul>
       {page.data.map(data => <Card {...data} />)}
     </ul>

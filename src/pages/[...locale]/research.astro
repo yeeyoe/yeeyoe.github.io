@@ -1,5 +1,9 @@
 ---
-import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/i18n/config";
+import {
+  DEFAULT_LOCALE,
+  SUPPORTED_LOCALES,
+  type LocaleKey,
+} from "@/i18n/config";
 import PageLayout from "@/layouts/PageLayout.astro";
 import { getResearchForLocale } from "@/utils/about";
 import { render } from "astro:content";
@@ -11,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { locale = DEFAULT_LOCALE } = Astro.params;
-const research = await getResearchForLocale(locale);
+const research = await getResearchForLocale(locale as LocaleKey);
 
 let Content;
 

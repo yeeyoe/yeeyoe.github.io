@@ -23,8 +23,8 @@ const blog = defineCollection({
     }),
 });
 
-const about = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/data/about" }),
+const me = defineCollection({
+  loader: glob({ pattern: "*.md", base: "./src/data/me" }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
@@ -32,27 +32,27 @@ const about = defineCollection({
 });
 
 const research = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/data/research" }),
+  loader: glob({ pattern: "*.md", base: "./src/data/research" }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
   }),
 });
 
-const teaching = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/data/teaching" }),
+const teach = defineCollection({
+  loader: glob({ pattern: "*.md", base: "./src/data/teach" }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
   }),
 });
 
-const coding = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/data/coding" }),
+const code = defineCollection({
+  loader: glob({ pattern: "*.md", base: "./src/data/code" }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
   }),
 });
 
-export const collections = { blog, about, research, teaching, coding };
+export const collections = { blog, me, research, teach, code };

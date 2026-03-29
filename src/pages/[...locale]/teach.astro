@@ -1,7 +1,11 @@
 ---
-import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/i18n/config";
+import {
+  DEFAULT_LOCALE,
+  SUPPORTED_LOCALES,
+  type LocaleKey,
+} from "@/i18n/config";
 import PageLayout from "@/layouts/PageLayout.astro";
-import { getTeachingForLocale } from "@/utils/about";
+import { getTeachForLocale } from "@/utils/about";
 import { render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -11,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { locale = DEFAULT_LOCALE } = Astro.params;
-const teaching = await getTeachingForLocale(locale);
+const teach = await getTeachForLocale(locale as LocaleKey);
 
 let Content;
 
@@ -19,17 +23,17 @@ let frontmatter: { title: string; description?: string } = {
   title: "",
 };
 
-if (teaching) {
-  const rendered = await render(teaching);
+if (teach) {
+  const rendered = await render(teach);
   Content = rendered.Content;
 
   frontmatter = {
-    title: teaching.data.title,
-    description: teaching.data.description,
+    title: teach.data.title,
+    description: teach.data.description,
   };
 }
 ---
 
-<PageLayout frontmatter={frontmatter} pageTitleKey="teaching">
+<PageLayout frontmatter={frontmatter} pageTitleKey="teach">
   {Content ? <Content /> : <p />}
 </PageLayout>
