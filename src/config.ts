@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://github.com/yeeyoe/astro-paper-en-ch/", // replace this with your deployed domain
+  website: "https://yeeyoe.github.io", // replace this with your deployed domain
   author: "Yi Yao",
-  profile: "https://yeeyoe.github.io/astro-paper-en-ch",
+  profile: "https://github.com/yeeyoe",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -11,7 +11,7 @@ export const SITE = {
   showBackButton: true, // show back button in post detail
   editPost: {
     enabled: true,
-    url: "https://github.com/yeeyoe/astro-paper-en-ch/edit/main/",
+    url: "https://github.com/yeeyoe/yeeyoe.github.io/edit/main/",
   },
   dynamicOgImage: true,
   lang: "en", // html lang code. Set this empty and default will be "en"

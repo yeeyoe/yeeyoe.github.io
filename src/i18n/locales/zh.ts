@@ -1,8 +1,8 @@
 import type { I18nStrings } from "@/i18n/types";
 
 const baseStrings = {
-  "site.title": "AstroPaper 多语言版",
-  "site.desc": "支持多语言的 AstroPaper 主题分支",
+  "site.title": "姚懿",
+  "site.desc": "姚懿的个人博客",
 };
 
 const CNLocale: I18nStrings = {
@@ -25,7 +25,7 @@ const CNLocale: I18nStrings = {
   coding: "编程",
   socialLinks: "社交链接",
   home: "首页",
-  posts: "文章",
+  posts: "博客",
   "posts.desc": "我发布的所有文章。",
   tag: "标签",
   "tag.desc": '所有带有"{name}"标签的文章。',
