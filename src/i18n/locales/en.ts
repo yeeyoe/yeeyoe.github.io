@@ -11,6 +11,9 @@ const ENLocale: I18nStrings = {
   "hero.body": `
         Welcome to my personal website. (Under construction...)
 `,
+  "hero.beforeReadme": "Read the blog posts or check",
+  "hero.readme": "README",
+  "hero.afterReadme": "for more info.",
   copy: "copy",
   copied: "copied",
   by: "by",

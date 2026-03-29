@@ -11,6 +11,9 @@ const CNLocale: I18nStrings = {
   "hero.body": `
         欢迎来到我的个人主页。（施工中...）
 `,
+  "hero.beforeReadme": "阅读博客文章或查看",
+  "hero.readme": "README",
+  "hero.afterReadme": "获取更多信息。",
   copy: "复制",
   copied: "已复制",
   by: "作者",
