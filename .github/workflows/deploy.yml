@@ -5,12 +5,14 @@ on:
     branches:
       - main
     paths:
-      - ".github/workflows/deploy.yml"
+      - ".github/workflows/**"
       - "src/**"
       - "public/**"
       - "astro.config.ts"
       - "tsconfig.json"
-      - "eslint.config.mjs"
+      - "eslint.config.js"
+      - "package.json"
+      - "pnpm-lock.yaml"
       - "remark-collapse.d.ts"
 
 concurrency:

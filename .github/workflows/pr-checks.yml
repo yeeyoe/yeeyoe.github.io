@@ -10,11 +10,14 @@ on:
       - synchronize
       - reopened
     paths:
+      - ".github/workflows/**"
       - "src/**"
       - "public/**"
       - "astro.config.ts"
       - "tsconfig.json"
-      - "eslint.config.mjs"
+      - "eslint.config.js"
+      - "package.json"
+      - "pnpm-lock.yaml"
       - "remark-collapse.d.ts"
 
 jobs:
