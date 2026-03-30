@@ -161,6 +161,75 @@ const structuredData = {
     <ClientRouter />
 
     <script is:inline src="/toggle-theme.js"></script>
+
+    <script is:inline>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          processEscapes: true,
+          processEnvironments: true,
+          tags: "ams",
+          packages: { "[+]": ["ams"] },
+        },
+        options: {
+          skipHtmlTags: [
+            "script",
+            "noscript",
+            "style",
+            "textarea",
+            "pre",
+            "code",
+          ],
+        },
+      };
+    </script>
+    <script
+      is:inline
+      defer
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script is:inline>
+      const typeset = async () => {
+        if (
+          typeof window === "undefined" ||
+          !window.MathJax ||
+          typeof window.MathJax.typesetPromise !== "function"
+        ) {
+          return;
+        }
+
+        if (typeof window.MathJax.texReset === "function") {
+          window.MathJax.texReset();
+        }
+        if (typeof window.MathJax.typesetClear === "function") {
+          window.MathJax.typesetClear();
+        }
+        if (
+          window.MathJax.startup?.document &&
+          typeof window.MathJax.startup.document.clear === "function" &&
+          typeof window.MathJax.startup.document.reset === "function"
+        ) {
+          window.MathJax.startup.document.clear();
+          window.MathJax.startup.document.reset();
+        }
+
+        await window.MathJax.typesetPromise();
+      };
+
+      if (!window.__mathJaxTypesetInstalled) {
+        window.__mathJaxTypesetInstalled = true;
+        document.addEventListener("astro:page-load", () => void typeset());
+        document.addEventListener("astro:after-swap", () => void typeset());
+        window.addEventListener("load", () => void typeset(), { once: true });
+      }
+    </script>
   </head>
   <body>
     <slot />
