@@ -39,47 +39,63 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     data-backurl={getRelativeLocalePath(locale, "/")}
   >
     <section id="hero" class="pt-8 pb-6">
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        {t("hero.title")}
-      </h1>
-      <a
-        target="_blank"
-        href={getRelativeLocalePath(Astro.currentLocale, "/rss.xml")}
-        class="inline-block"
-        aria-label={t("a11y.rssFeed")}
-        title={t("rssFeed")}
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:rotate-270"
-        />
-        <span class="sr-only">{t("rssFeed")}</span>
-      </a>
-      <p>
-        {t("hero.body")}
-      </p>
-      <p class="mt-2">
-        {t("hero.beforeReadme")}
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          {t("hero.readme")}
-        </LinkButton>
-        {t("hero.afterReadme")}
-      </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">
-              {t("socialLinks")}:
-            </div>
-            <Socials />
+      <div class="grid gap-8 sm:grid-cols-[14rem_1fr] sm:items-center">
+        <div class="flex justify-center sm:justify-start">
+          <img
+            src="/xuanxuan.jpeg"
+            alt={SITE.author}
+            width="224"
+            height="224"
+            loading="eager"
+            class="h-40 w-40 rounded-2xl border border-border object-cover shadow-sm sm:h-110 sm:w-60"
+          />
+        </div>
+        <div>
+          <div class="my-4 flex items-center gap-3 sm:my-8">
+            <h1 class="text-4xl font-bold sm:text-5xl">
+              {t("hero.title")}
+            </h1>
+            <a
+              target="_blank"
+              href={getRelativeLocalePath(Astro.currentLocale, "/rss.xml")}
+              class="inline-flex items-center"
+              aria-label={t("a11y.rssFeed")}
+              title={t("rssFeed")}
+            >
+              <IconRss
+                width={20}
+                height={20}
+                class="scale-125 stroke-accent stroke-3 rtl:rotate-270"
+              />
+              <span class="sr-only">{t("rssFeed")}</span>
+            </a>
           </div>
-        )
-      }
+          <p>
+            {t("hero.body")}
+          </p>
+          <p class="mt-2">
+            {t("hero.beforeReadme")}
+            <LinkButton
+              class="underline decoration-dashed underline-offset-4 hover:text-accent"
+              href="https://github.com/satnaing/astro-paper#readme"
+            >
+              {t("hero.readme")}
+            </LinkButton>
+            {t("hero.afterReadme")}
+          </p>
+          {
+            // only display if at least one social link is enabled
+            SOCIALS.length > 0 && (
+              <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
+                <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">
+                  {t("socialLinks")}:
+                </div>
+                <Socials />
+              </div>
+            )
+          }
+        </div>
+      </div>
     </section>
 
     <Hr />
